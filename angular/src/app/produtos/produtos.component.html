@@ -1,0 +1,14 @@
+<section>
+    <button mat-raised-button color="primary" routerLink="cadastrar">Adicionar</button>
+
+    <mat-card *ngFor="let produto of produtos">
+        <mat-card-title>{{produto.nome}}</mat-card-title>
+        <mat-card-subtitle>{{produto.desc}}</mat-card-subtitle>
+        <mat-card-actions align="end">
+            <button mat-button color="warn" routerLink="excluir">Excluir</button>
+            <button mat-button color="primary" routerLink="editar">Editar</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
+
+<router-outlet></router-outlet>

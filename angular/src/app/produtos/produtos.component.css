@@ -1,0 +1,12 @@
+section {
+  max-width: 960px;
+  margin: auto;
+}
+
+[mat-raised-button] {
+  margin-bottom: 18px;
+}
+
+mat-card {
+  margin-bottom: 24px;
+}

@@ -1,0 +1,17 @@
+<section>
+    <h2>Titulo</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet ab ipsa ratione ea sit, et consectetur eos quia aspernatur laboriosam officiis voluptas cupiditate suscipit similique officia, dignissimos, nesciunt illo qui.</p>
+    <ul>
+        <li *ngFor="let pessoa of listPessoas">
+            <div class="dados">
+                <span>ID: {{pessoa.id}}</span>
+                <span>Nome: {{pessoa.nome}}</span>
+                <mat-slider min="1" max="5" step="1" value="3"></mat-slider>
+                <button mat-stroked-button color="warn">Olha o botão ae</button>
+            </div>
+            <div class="img">
+                <img src={{pessoa.img}} alt={{pessoa.nome}}>
+            </div>
+        </li>
+    </ul>
+</section>
