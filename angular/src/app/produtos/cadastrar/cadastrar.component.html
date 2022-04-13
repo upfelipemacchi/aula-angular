@@ -1,33 +1,29 @@
-<div>
+<div class="modal">
     <mat-card>
         <mat-card-title>Adicionar produto</mat-card-title>
-        <div style="margin-bottom: 12px;">
-            <div>
-                <label>Nome</label>
+            <div style="margin-bottom: 12px;">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nome</mat-label>
+                    <input matInput type="text" name="nome" placeholder="Digite o nome" [(ngModel)]="produto.nome">
+                </mat-form-field>
             </div>
-            <div>
-                <input type="text">
+            <div style="margin-bottom: 12px;">
+                <mat-form-field appearance="fill">
+                    <mat-label>Descrição</mat-label>
+                    <input matInput type="text" name="desc" placeholder="Digite a descrição" [(ngModel)]="produto.desc">
+                </mat-form-field>
             </div>
-        </div>
-        <div style="margin-bottom: 12px;">
-            <div>
-                <label>Descrição</label>
+            <div style="margin-bottom: 12px;">
+                <div>
+                    <label>Foto</label>
+                </div>
+                <div>
+                    <input type="text" name="foto" placeholder="Digite a foto" [(ngModel)]="produto.foto">
+                </div>
             </div>
-            <div>
-                <input type="text">
-            </div>
-        </div>
-        <div style="margin-bottom: 12px;">
-            <div>
-                <label>Foto</label>
-            </div>
-            <div>
-                <input type="text">
-            </div>
-        </div>
-        <mat-card-actions align="end">
-            <button mat-button color="warn" routerLink="excluir">Cancelar</button>
-            <button mat-raised-button color="primary" routerLink="editar">Salvar</button>
-        </mat-card-actions>
+            <mat-card-actions align="end">
+                <button mat-button color="warn" routerLink="/produtos">Cancelar</button>
+                <button mat-raised-button color="primary" (click)="salvarProduto()">Salvar</button>
+            </mat-card-actions>
     </mat-card>
 </div>

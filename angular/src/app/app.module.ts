@@ -17,12 +17,19 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldControl } from '@angular/material/form-field';
+
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { CadastrarComponent } from './produtos/cadastrar/cadastrar.component';
 import { EditarComponent } from './produtos/editar/editar.component';
 import { ExcluirComponent } from './produtos/excluir/excluir.component';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +54,11 @@ import { ExcluirComponent } from './produtos/excluir/excluir.component';
     MatSliderModule,
     MatButtonModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

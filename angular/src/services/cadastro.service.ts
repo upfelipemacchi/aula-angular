@@ -20,16 +20,16 @@ export class CadastroService {
     return this.http.get<Produto>(`${this.URL}/${id}`)
   }
 
-  produtoIncluir(produto : Produto) {
-    this.http.post(this.URL, produto);
+  produtoIncluir(produto : Produto) : Observable<any> {
+    return this.http.post(this.URL, produto);
   }
 
-  produtoAtualizar(produto : Produto, id : number) {
-    this.http.put(`${this.URL}/${id}`, produto);
+  produtoAtualizar(produto : Produto, id : number) : Observable<any> {
+    return this.http.put(`${this.URL}/${id}`, produto);
   }
 
-  produtoExcluir(id : number) {
-    this.http.delete(`${this.URL}/${id}`);
+  produtoExcluir(id : number) : Observable<any> {
+    return this.http.delete(`${this.URL}/${id}`);
   }
 
 }

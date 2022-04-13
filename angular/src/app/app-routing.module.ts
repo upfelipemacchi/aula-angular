@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'produtos', component: ProdutosComponent,
     children: [
       { path: 'cadastrar', component: CadastrarComponent },
-      { path: 'editar', component: EditarComponent },
-      { path: 'excluir', component: ExcluirComponent }
+      { path: 'editar/:id', component: EditarComponent },
+      { path: 'excluir/:id', component: ExcluirComponent }
     ],
   },
 ];
